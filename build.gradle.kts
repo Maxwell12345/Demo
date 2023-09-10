@@ -10,7 +10,6 @@ version = "1.0-SNAPSHOT"
 repositories {
     google()
     mavenCentral()
-//    maven("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven")
 }
 
 kotlin {
@@ -45,14 +44,10 @@ kotlin {
                 implementation("io.ktor:ktor-server-netty:2.2.1")
                 implementation("io.ktor:ktor-server-html-builder-jvm:2.2.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.1")
-//                implementation("org.jetbrains.kotlinx:kotlin-deeplearning-api:0.3.0")
                 implementation("org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:0.6.0-alpha-1")
-//                implementation("org.tensorflow:tensorflow:1.15.0")
                 implementation("org.checkerframework:checker:3.38.0")
+                implementation("org.openpnp:opencv:4.7.0-0")
 
-//                implementation("org.jetbrains.kotlinx:kotlin-deeplearning-visualization:0.3.0")
-//                implementation("com.google.android.gms:play-services-tflite-gpu:16.1.0")
-//                implementation("org.tensorflow:tensorflow-lite-task-vision-play-services:0.4.2")
             }
         }
         val jvmTest by getting

@@ -5,5 +5,7 @@
 *.pt
 .gradle/
 build/
+gradle/
 kotlin-js-store/
 .git/
+.idea/

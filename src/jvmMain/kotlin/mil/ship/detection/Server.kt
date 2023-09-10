@@ -9,6 +9,7 @@ import io.ktor.server.netty.Netty
 import io.ktor.server.routing.*
 import kotlinx.html.*
 import mil.ship.detection.ml.model
+import org.opencv.core.Core
 
 fun HTML.index() {
     head {
@@ -26,15 +27,18 @@ fun HTML.index() {
 }
 
 fun main() {
+    System.loadLibrary(Core.NATIVE_LIBRARY_NAME)
+
     var testModel = model()
-    embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
-        routing {
-            get("/") {
-                call.respondHtml(HttpStatusCode.OK, HTML::index)
-            }
-            static("/static") {
-                resources()
-            }
-        }
-    }.start(wait = true)
+
+//    embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
+//        routing {
+//            get("/") {
+//                call.respondHtml(HttpStatusCode.OK, HTML::index)
+//            }
+//            static("/static") {
+//                resources()
+//            }
+//        }
+//    }.start(wait = true)
 }

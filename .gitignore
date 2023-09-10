@@ -3,3 +3,7 @@
 *.pb
 *.tflite
 *.pt
+.gradle/
+build/
+kotlin-js-store/
+.git/
